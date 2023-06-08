@@ -1,0 +1,214 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: black;
+  margin-top: 24px;
+}
+
+.title {
+  font-family: Copperplate;
+  font-size: 28px;
+  font-weight: 600;
+  background-image: linear-gradient(to left, #1899ff, #93d3cc);
+  color: transparent;
+  -webkit-background-clip: text;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.container {
+  border: 2px solid;
+  border-image: linear-gradient(to bottom, #1899ff, #93d3cc) 1 0;
+  animation: appear 3s ease-in;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+
+.image {
+  height: 400px;
+  width: 320px;
+  padding: 5px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(200px, auto);
+  row-gap: 20px;
+  column-gap: 10px;
+  justify-items: center;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.slope-name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  font-size: 40px;
+  color: whitesmoke;
+  transition: 0.7s ease;
+}
+
+.container:hover .image {
+  opacity: 0.2;
+}
+
+.container:hover .slope-name {
+  opacity: 1;
+}
+
+.rating {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  width: 270px;
+  background-color: #0909c0a1;
+  color: #000;
+  text-align: center;
+  border-radius: 20px;
+  padding: 30px 30px 70px;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  font-size: 16px;
+  color: white;
+}
+
+form input {
+  margin: 10px 0;
+  height: 30px;
+  padding: 10px;
+}
+
+form input[type="checkbox"] {
+  height: 20px;
+  margin: 0 10px 0 0;
+}
+
+form textarea {
+  margin: 16px 0;
+  min-height: 130px;
+  padding: 10px;
+}
+
+form button {
+  margin-top: 20px;
+  background-color: #aa11ba;
+  border: none;
+  border-radius: 5px;
+  width: 200px;
+  padding: 14px;
+  font-size: 16px;
+  color: white;
+  box-shadow: 0px 6px 18px -5px rgb(85, 100, 237);
+  align-self: center;
+  font-family: Copperplate, serif;
+}
+
+form label {
+  font-size: 12px;
+  font-family: MONOSPACE, sans-serif;
+  padding: 8px 0;
+}
+
+form select {
+  padding: 10px;
+  height: 40px;
+}
+
+.terms-and-conditions {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  padding: 16px;
+  justify-content: center;
+}
+
+footer {
+  margin-top: 40px;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  font-style: italic;
+  border-top: 1px solid;
+}
+
+.error-message {
+  color: #ffc200;
+  font-weight: bold;
+}
+
+.close-button {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  color: whitesmoke;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.low-opacity {
+  opacity: 0.2;
+}
+
+.full-opacity {
+  opacity: 1;
+}
+
+@keyframes appear {
+  0% {
+    border-image: linear-gradient(to bottom, #680558, #e83e09) 1 0;
+  }
+
+  30% {
+    border-image: linear-gradient(to bottom, #8410db, #ad1066) 1 0;
+  }
+
+  50% {
+    border-image: linear-gradient(to bottom, #4c1abf, #14746a) 1 0;
+  }
+
+  70% {
+    border-image: linear-gradient(to bottom, #23c65d, #93d3cc) 1 0;
+  }
+  100% {
+    border-image: linear-gradient(to bottom, #04bbff, #93d3cc) 1 0;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    margin-top: 40px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 100px;
+  }
+
+  .rating {
+    width: 450px;
+  }
+}

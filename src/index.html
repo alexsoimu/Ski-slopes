@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Ski slopes Romania</title>
+    <link href="index.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="page-content">
+      <h2 class="title">Rate ski slopes in Romania</h2>
+
+      <div class="cards full-opacity">
+        <div class="container">
+          <img
+            alt="Straja"
+            class="image"
+            name="Straja"
+            src="/assets/straja.jpg"
+          />
+          <div name="Straja" class="slope-name">Straja</div>
+        </div>
+        <div class="container">
+          <img
+            alt="Sinaia"
+            class="image"
+            name="Sinaia"
+            src="/assets/sinaia.jpg"
+          />
+          <div name="Sinaia" class="slope-name">Sinaia</div>
+        </div>
+        <div class="container">
+          <img
+            alt="Poiana-Brasov"
+            class="image"
+            name="Poiana-Brasov"
+            src="/assets/poiana.jpeg"
+          />
+          <div name="Poiana-Brasov" class="slope-name">Poiana-Brasov</div>
+        </div>
+        <div class="container">
+          <img
+            alt="Transalpina"
+            class="image"
+            name="Transalpina"
+            src="/assets/transalpina.jpeg"
+          />
+          <div name="Transalpina" class="slope-name">Transalpina</div>
+        </div>
+        <div class="container">
+          <img
+            alt="Paltinis"
+            class="image"
+            name="Paltinis"
+            src="/assets/paltinis.jpeg"
+          />
+          <div name="Paltinis" class="slope-name">Paltinis</div>
+        </div>
+        <div class="container">
+          <img alt="Borsa" class="image" name="Borsa" src="/assets/borsa.jpg" />
+          <div name="Borsa" class="slope-name">Borsa</div>
+        </div>
+      </div>
+      <footer id="current-time"></footer>
+    </div>
+    <div class="rating hide">
+      <form id="rating-form">
+        <div class="close-button" id="close-form">x</div>
+        <div class="title" id="title"></div>
+        <p class="error-message"></p>
+        <input id="name" placeholder="Your name here.. " type="text" />
+        <input id="email" placeholder="Your email.." type="text" />
+        <label for="grade">Give a rating from 1 (worst) to 5 (best) </label>
+        <select id="grade">
+          <option value="1">🌟</option>
+          <option value="2">🌟🌟</option>
+          <option value="3">🌟🌟🌟</option>
+          <option value="4">🌟🌟🌟🌟</option>
+          <option value="5">🌟🌟🌟🌟🌟</option>
+        </select>
+        <textarea id="message" placeholder="Your feedback.."></textarea>
+        <div class="terms-and-conditions">
+          <input class="termsConditions" id="terms" type="checkbox" />
+          <label for="terms">
+            I Accept the
+            <span class="terms">Terms of Use</span>
+            <span> & </span>
+            <span class="privacy-policy">Privacy Policy</span>.
+          </label>
+        </div>
+
+        <button class="submit formEntry">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
